@@ -4,7 +4,7 @@ This repository presents a single script which is intended to aid in setting the
 
 The idea for this script was stimulated by the discussion at [Dr Duh YubiKey-Guide: Issue 504](https://github.com/drduh/YubiKey-Guide/issues/504).
 
-If the script is running on macOS **and** the user selects the `pinentry-mac` program, the script also installs both a *run-at-load* [LaunchAgent](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html) and a complementary *delegate* (`bash` script) which performs basic error checking **before** taking any possibly destructive actions. The *delegate* script also maintains a log of its activities so that the user has somewhere to start if the script detects problems.
+If the script is running on macOS **and** the user selects the `pinentry-mac` program, the script also installs both a *run-at-load* [LaunchAgent](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html) and a complementary *delegate* (shell script) which performs basic error checking **before** taking any possibly destructive actions. The *delegate* also maintains a log of its activities so that the user has somewhere to start if it detects problems.
 
 The launch agent and delegate replace the functionality of the pair of launch agents described at:
 
